@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Cart</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-warning shadow fixed-top px-3 py-3">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="/">Mini Amazon</a>
+    <div>
+      <a href="/" class="btn btn-outline-dark me-2">🏠 Home</a>
+      <% if (!user) { %>
+        <a href="/register" class="btn btn-outline-dark">Sign up</a>
+        <a href="/login" class="btn btn-outline-dark">Login</a>
+      <% } else { %>
+        <span class="me-2">Hello, <%= user.username || user.email %></span>
+        <a href="/logout" class="btn btn-outline-dark">Logout</a>
+      <% } %>
+    </div>
+  </div>
+</nav>
+
+<div class="container my-5 pt-5">
+  <h1 class="mb-4">Your Cart</h1>
+
+  <% if (!cart || cart.length === 0) { %>
+    <p>Your cart is empty. <a href="/">Shop now!</a></p>
+  <% } else { %>
+    <ul class="list-group mb-4">
+      <% cart.forEach(item => { %>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <div>
+            <strong><%= item.name %></strong> (x<%= item.qty %>)
+          </div>
+          <span class="fw-bold">$<%= item.price * item.qty %></span>
+        </li>
+      <% }) %>
+    </ul>
+
+    <h4>Total: $<%= total %></h4>
+
+    <!-- Checkout Form -->
+    <form action="/checkout" method="POST">
+      <button type="submit" class="btn btn-success w-100 btn-lg mb-3">Proceed to Checkout</button>
+    </form>
+
+    <a href="/" class="btn btn-outline-secondary w-100">Continue Shopping</a>
+  <% } %>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

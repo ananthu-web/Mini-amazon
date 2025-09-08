@@ -1,0 +1,20 @@
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); /* zoom entire card */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* add stronger shadow */
+}
+
+.card {
+  border-radius: 20px;   /* you can change px value */
+  overflow: hidden;      /* keeps image inside rounded corners */
+}
+body {
+  padding-top: 50px; /* match navbar height */
+}
+
+
+
+
