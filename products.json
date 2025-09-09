@@ -110,85 +110,85 @@
   {
     "name": "Samsung Galaxy Watch 6",
     "price": 400,
-    "img": "https://images.samsung.com/is/image/samsung/p6pim/in/galaxy-watch-6-front-500.jpg",
+    "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthfvnext.bing.com%2Fth%2Fid%2FOIP.1saLIkoOf_pj6bG-RzKlegHaHa%3Fr%3D0%26cb%3Dthfvnext%26pid%3DApi&f=1&ipt=5246e8970cb5294e3c746ed6dd7a284bdcc34e78483495e156d4c35d7468633b&ipo=images",
     "desc": "Smartwatch with health tracking"
   },
   {
     "name": "Anker Soundcore Liberty 3",
     "price": 120,
-    "img": "https://m.media-amazon.com/images/I/71ANz8uE3yL._AC_SL1500_.jpg",
+    "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.f0bcjZNNbLfBgYUipbXvigHaHa%3Fpid%3DApi&f=1&ipt=a1a824fa4f0343c777bce6c3d3bf92ff9ba5d9a3ae80aec2b2e81df3ca75bf18&ipo=images",
     "desc": "Affordable noise-cancelling earbuds"
   },
   {
     "name": "iPhone 14 Pro",
     "price": 1100,
-    "img": "https://www.apple.com/newsroom/images/2022/09/iphone-14-pro-hero.png",
+    "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthvnext.bing.com%2Fth%2Fid%2FOIP.0KlzN9cMXghlM9peEfZXowHaHa%3Fcb%3Ducfimg2%26pid%3DApi%26ucfimg%3D1&f=1&ipt=ed946636a4981a6b6b2551d89aa0bf8ccca0bd45d435b3c1f27a9f4b45d48dcc&ipo=images",
     "desc": "Apple's previous flagship phone"
   },
   {
     "name": "MacBook Pro 16-inch",
     "price": 2500,
-    "img": "https://www.apple.com/newsroom/images/2021/10/macbook-pro-16-inch-hero.png",
+    "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthvnext.bing.com%2Fth%2Fid%2FOIP.t5_n1I3QBFwGV1Jo8ZMMvQHaHa%3Fcb%3Ducfimg2%26pid%3DApi%26ucfimg%3D1&f=1&ipt=a38345a54af4790af3f8b2241549d72eb63e496a6045a185520499039bf1e0de&ipo=images",
     "desc": "High-performance laptop for professionals"
   },
   {
     "name": "Sony WH-1000XM4",
     "price": 350,
-    "img": "https://m.media-amazon.com/images/I/71Xz8Zz0Z7L._AC_SL1500_.jpg",
+    "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.4E-8ID0ohBNn9AuMe4oqtAHaLB%3Fpid%3DApi&f=1&ipt=a791e7a7dbc5fd250655b741bb2e21bc28874131220773087d1c9174aa760125&ipo=images",
     "desc": "Industry-leading noise-cancelling headphones"
   },
   {
     "name": "Apple Watch SE",
     "price": 250,
-    "img": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYJ73_AV1?wid=2000&hei=2000&fmt=jpeg",
+    "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthfvnext.bing.com%2Fth%2Fid%2FOIP.B_UvrP6jZJIhH4_ryJMZ5gHaHa%3Fr%3D0%26cb%3Dthfvnext%26pid%3DApi&f=1&ipt=0a115c688275121cb236446b37cc545ce9041961a68c2aa11f3d37ddd877bace&ipo=images",
     "desc": "Affordable smartwatch with essential features"
   },
   {
     "name": "Google Nest Hub",
     "price": 90,
-    "img": "https://store.google.com/product/images/nest_hub_max.jpg",
+    "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%2Fid%2FOIP.ObcbAfZt7CeJ2jvj713v-QHaE5%3Fr%3D0%26pid%3DApi&f=1&ipt=ef889c3f018676bc2325b6ae1a04dbce65416e69c54050197aa7203a816cf0c4&ipo=images",
     "desc": "Smart display for your home"
   },
   {
     "name": "Amazon Echo Dot (4th Gen)",
     "price": 50,
-    "img": "https://m.media-amazon.com/images/I/61tQZ3yJ8pL._AC_SL1000_.jpg",
+    "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthfvnext.bing.com%2Fth%2Fid%2FOIP.UjbrgWage2drMia7zE0YYgHaFw%3Fcb%3Dthfvnext%26pid%3DApi&f=1&ipt=309809d252bf4e6f21829f77f9490ce55033afa436659b10cd968cdd0e21ceb4&ipo=images",
     "desc": "Compact smart speaker with Alexa"
   },
   {
     "name": "Fitbit Charge 5",
     "price": 180,
-    "img": "https://static-assets.fitbit.com/images/charge5/charge5-hero.png",
+    "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.RDybO2roP-YdXbHZToNU5wHaHa%3Fpid%3DApi&f=1&ipt=97aadcc95c197a4497d2c41d47bdf6de1bccf6ca6daf85ced86d3745badfc23f&ipo=images",
     "desc": "Advanced fitness and health tracker"
   },
   {
     "name": "Nintendo Switch OLED",
     "price": 350,
-    "img": "https://www.nintendo.com/content/dam/noa/en_US/hardware/switch/console/switch-oled-model-hero.png",
+    "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.6lVJyn9VLtemi50bg0_-uQHaHa%3Fpid%3DApi&f=1&ipt=b45a186cd445126d82a84c477f8e62c95f30d5d35a658fc0662acb039bafaabe&ipo=images",
     "desc": "Hybrid gaming console with OLED screen"
   },
   {
     "name": "Huawei MateBook X Pro",
     "price": 1800,
-    "img": "https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/laptops/matebook-x-pro-2021/images/matebook-x-pro-2021-hero.png",
+    "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthfvnext.bing.com%2Fth%2Fid%2FOIP.hSgwct70PDgQUe7xMC06ogHaD5%3Fcb%3Dthfvnext%26pid%3DApi&f=1&ipt=6d5e827d7d6258df92db9c702bb1906ffb628bf229a34e8b1b4a1e630fc60da8&ipo=images",
     "desc": "Premium ultrabook with high-resolution display"
   },
   {
     "name": "Dell Alienware M15",
     "price": 2000,
-    "img": "https://i.dell.com/sites/imagecontent/products/PublishingImages/alienware-m15-laptop/spi/ng/alienware-m15-laptop-pdp-polaris-500x500.jpg",
+    "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.T6e3-pQZbtzfaAZs5kmlqwHaFj%3Fr%3D0%26pid%3DApi&f=1&ipt=75ccbacb368a85c0a4f3b1caaa0f386f92ef8c9bb76b0538a9843274b221bdbd&ipo=images",
     "desc": "High-performance gaming laptop"
   },
   {
     "name": "Microsoft Surface Pro 8",
     "price": 1200,
-    "img": "https://www.microsoft.com/en-us/surface/images/surface-pro-8-hero.png",
+    "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.GO3N2TXEfVvgH9WN7kVitQHaFj%3Fpid%3DApi&f=1&ipt=e9c8272eb0c2f2cef54ffd98e1db6210d5847406535b5e9cf302a61d255eca5e&ipo=images",
     "desc": "Versatile 2-in-1 laptop with touch screen"
   },
   {
     "name": "Asus ZenBook 14",
     "price": 900,
-    "img": "https://www.asus.com/media/16447317/zenbook-14-ux425ea-hero.png",
+    "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthf.bing.com%2Fth%2Fid%2FOIP.-NBi-4mxuM-45pAreqJ60gHaHe%3Fcb%3Dthfc1%26pid%3DApi%26ucfimg%3D1&f=1&ipt=16c4d75af0ba5173853701f8fb8618854933316070dc86d6cffefc3bc4ecf5b9&ipo=images",
     "desc": "Slim and lightweight ultrabook"
   }
  
