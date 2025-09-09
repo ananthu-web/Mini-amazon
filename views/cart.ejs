@@ -36,8 +36,31 @@
         <li class="list-group-item d-flex justify-content-between align-items-center">
           <div>
             <strong><%= item.name %></strong> (x<%= item.qty %>)
+            <br>
+            <small>$<%= item.price %> each</small>
           </div>
-          <span class="fw-bold">$<%= item.price * item.qty %></span>
+
+          <div class="d-flex align-items-center">
+            <span class="fw-bold me-3">$<%= item.price * item.qty %></span>
+
+            <!-- Decrease button -->
+            <form action="/remove-from-cart" method="POST" style="display:inline;">
+              <input type="hidden" name="name" value="<%= item.name %>">
+              <button type="submit" class="btn btn-sm btn-danger">-</button>
+            </form>
+
+            <!-- Increase button -->
+            <form action="/increase-qty" method="POST" style="display:inline; margin-left:5px;">
+              <input type="hidden" name="name" value="<%= item.name %>">
+              <button type="submit" class="btn btn-sm btn-success">+</button>
+            </form>
+
+            <!-- Remove All button -->
+            <form action="/remove-item" method="POST" style="display:inline; margin-left:5px;">
+              <input type="hidden" name="name" value="<%= item.name %>">
+              <button type="submit" class="btn btn-sm btn-outline-dark">Remove All</button>
+            </form>
+          </div>
         </li>
       <% }) %>
     </ul>

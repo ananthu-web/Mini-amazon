@@ -75,6 +75,48 @@ app.get('/cart', (req, res) => {
   res.render('cart', { cart, total });
 });
 
+// ✅ Remove 1 from cart
+app.post('/remove-from-cart', (req, res) => {
+  const { name } = req.body;
+  if (!req.session.cart) return res.redirect('/cart');
+
+  const itemIndex = req.session.cart.findIndex(item => item.name === name);
+
+  if (itemIndex > -1) {
+    req.session.cart[itemIndex].qty -= 1;
+
+    // If qty = 0 → remove item completely
+    if (req.session.cart[itemIndex].qty <= 0) {
+      req.session.cart.splice(itemIndex, 1);
+    }
+  }
+
+  res.redirect('/cart');
+});
+
+// ✅ Increase qty in cart
+app.post('/increase-qty', (req, res) => {
+  const { name } = req.body;
+  if (!req.session.cart) return res.redirect('/cart');
+
+  const itemIndex = req.session.cart.findIndex(item => item.name === name);
+  if (itemIndex > -1) {
+    req.session.cart[itemIndex].qty += 1;
+  }
+
+  res.redirect('/cart');
+});
+
+// ✅ Remove entire item
+app.post('/remove-item', (req, res) => {
+  const { name } = req.body;
+  if (!req.session.cart) return res.redirect('/cart');
+
+  req.session.cart = req.session.cart.filter(item => item.name !== name);
+
+  res.redirect('/cart');
+});
+
 // Checkout
 app.post('/checkout', (req, res) => {
   if (!req.session.user) return res.redirect('/login');
@@ -120,7 +162,7 @@ app.post('/login', async (req, res) => {
   const isMatch = await bcrypt.compare(password, user.password);
   if (!isMatch) return res.send("Invalid credentials");
 
-  req.session.user = { id: user._id, email: user.email };
+  req.session.user = { id: user._id, username: user.username, email: user.email };
   if (!req.session.cart) req.session.cart = [];
   res.redirect('/');
 });
@@ -138,7 +180,7 @@ app.post('/register', async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, 10);
 
     const user = await User.create({ username, email, password: hashedPassword });
-    req.session.user = { id: user._id, email: user.email };
+    req.session.user = { id: user._id, email: user.email, username: user.username };
     if (!req.session.cart) req.session.cart = [];
     res.redirect('/');
   } catch (err) {
