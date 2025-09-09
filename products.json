@@ -1,0 +1,195 @@
+[
+  {
+    "name": "iPhone 15",
+    "price": 1200,
+    "img": "https://www.gizmochina.com/wp-content/uploads/2023/10/iPhone-15-1024x651.png",
+    "desc": "Latest Apple iPhone"
+  },
+  {
+    "name": "MacBook Air M2",
+    "price": 1500,
+    "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthf.bing.com%2Fth%2Fid%2FOIP.FE59pxJq8hNAEqtnM_CglwHaFf%3Fcb%3Dthfc1%26pid%3DApi&f=1&ipt=a830eed07cfece2c5d451f31781a5b19a2bca9d8dd9b3031554fac53f2a792bb&ipo=images",
+    "desc": "Lightweight Apple laptop"
+  },
+  {
+    "name": "AirPods Pro",
+    "price": 250,
+    "img": "https://m.media-amazon.com/images/I/71zny7BTRlL._AC_SL1500_.jpg",
+    "desc": "Noise-cancelling wireless earbuds"
+  },
+  {
+    "name": "Samsung Galaxy S23",
+    "price": 1100,
+    "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.5QMkXIlusvZfEUm50okfbAHaHa%3Fpid%3DApi&f=1&ipt=c7f17796e3b7e2ebf017ada28607a864a2c73f40422ba28453d9d5c88206eb8d",
+    "desc": "Flagship Android smartphone"
+  },
+  {
+    "name": "Sony WH-1000XM5",
+    "price": 400,
+    "img": "https://m.media-amazon.com/images/I/71o8Q5XJS5L._AC_SL1500_.jpg",
+    "desc": "Premium noise-cancelling headphones"
+  },
+  {
+    "name": "Apple Watch Series 9",
+    "price": 500,
+    "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.67LXN8qA-Ipu81gwc95b_QHaHa%3Fpid%3DApi&f=1&ipt=8910409d96ace8c63f5411dc6f18803bb58b32428f80f2392c26037631b5ca24&ipo=images",
+    "desc": "Advanced fitness & health tracking"
+  },
+  {
+    "name": "Dell XPS 13",
+    "price": 1300,
+    "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.Gj0r7pwrRi6BJoWEgGMOPgHaEZ%3Fpid%3DApi&f=1&ipt=bf325dd7bf7b8157bb8cc4d8335a5882bdf9eeced7c6f54a6afd79f67484db8f&ipo=images",
+    "desc": "Compact Windows laptop"
+  },
+  {
+    "name": "Google Pixel 8",
+    "price": 900,
+    "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.N0q393DiVd1BhfqcxE8ITwHaHa%3Fpid%3DApi&f=1&ipt=f61341fe292f60a914f3410ebe14eca505bcd0e457162956a33e3a5dc9500986&ipo=images",
+    "desc": "Google flagship phone"
+  },
+  {
+    "name": "Bose QuietComfort Earbuds",
+    "price": 280,
+    "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.VpDTFgcWWC0jizM4acGjXwHaHa%3Fr%3D0%26pid%3DApi&f=1&ipt=9aa1fa7eec890519947cd38b30833e22a89de3120ff24c6e1185b1b1ff44b368&ipo=images",
+    "desc": "Premium wireless earbuds"
+  },
+  {
+    "name": "HP Spectre x360",
+    "price": 1450,
+    "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthfvnext.bing.com%2Fth%2Fid%2FOIP.mWsPof8EnmQ3ifLs7JpBHQHaFc%3Fcb%3Dthfvnext%26pid%3DApi&f=1&ipt=001c7100ba29c626e4ab449f22724774044d3b9d007431a20c3e8ee0bf14235f&ipo=images",
+    "desc": "Convertible 2-in-1 laptop"
+  },
+  {
+    "name": "Samsung Galaxy Buds 2",
+    "price": 150,
+    "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.oG2IzSzPEi4UYe2ZsbKRAQHaHa%3Fpid%3DApi&f=1&ipt=0ceaac3b28f85356de55a8ec1fcccc3f580abbc5900580233bf4b66c1cacd2dd&ipo=images",
+    "desc": "Affordable wireless earbuds"
+  },
+  {
+    "name": "Apple iPad Air",
+    "price": 700,
+    "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.CrZhSZrt5PBBtaqU7DyepQHaLH%3Fpid%3DApi&f=1&ipt=374b09ee1ff9dabddc5625710df8dd9687de6196adfd8cee0da251078809d410&ipo=images",
+    "desc": "Powerful tablet for work & play"
+  },
+  {
+    "name": "OnePlus 11",
+    "price": 750,
+    "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.G9kaQQBEYJZsU3toyj5wdgHaHa%3Fpid%3DApi&f=1&ipt=b1fcfec2f747a967bb1424089b2f59693d01b1f7bc4c6446478b6dab6d111408&ipo=images",
+    "desc": "High performance Android smartphone"
+  },
+  {
+    "name": "Sony PlayStation 5",
+    "price": 600,
+    "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.saf_RFnp3CeSGA6vI_WMKwHaE8%3Fr%3D0%26pid%3DApi&f=1&ipt=f3ec0bfefd49598dcdfc166936834c8e897ecaa92608d639e82db45f77d2e163&ipo=images",
+    "desc": "Next-gen gaming console"
+  },
+  {
+    "name": "Xbox Series X",
+    "price": 550,
+    "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthf.bing.com%2Fth%2Fid%2FOIP.b7FpMuVrwCdlcTZ6IYJpyAHaHa%3Fr%3D0%26cb%3Dthfc1%26pid%3DApi&f=1&ipt=3ec917a95d1a324794f2306f81de1d8df54f46dd29105d8528038cf8ebd25bad&ipo=images",
+    "desc": "Microsoft next-gen console"
+  },
+  {
+    "name": "Kindle Paperwhite",
+    "price": 150,
+    "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.VWRJBjlqZwCdwTr6HkuBBwHaF5%3Fpid%3DApi&f=1&ipt=3c227b8cc46b2ab2d6ae3fc73ca5d47a9a2fcda18254a98acb730ea468ff2de8&ipo=images",
+    "desc": "E-reader with high-resolution display"
+  },
+  {
+    "name": "Logitech MX Master 3",
+    "price": 100,
+    "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP._9ZGIo6ohG2tKa-6mQiv_gHaKL%3Fpid%3DApi&f=1&ipt=90a5966743b4d191339595f44c04cde2e223100a8e21200d5ffdbec7fbb1498b&ipo=images",
+    "desc": "Advanced wireless mouse"
+  },
+  {
+    "name": "Razer BlackWidow V4",
+    "price": 180,
+    "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%2Fid%2FOIP.w1bCjMtHNdnD4Yx8C72GYAHaEn%3Fpid%3DApi&f=1&ipt=1284a5e070e1101134f628092e4031e375b0c680ecf13381d746f5f7e8b76935&ipo=images",
+    "desc": "Mechanical gaming keyboard"
+  },
+  {
+    "name": "Samsung Galaxy Watch 6",
+    "price": 400,
+    "img": "https://images.samsung.com/is/image/samsung/p6pim/in/galaxy-watch-6-front-500.jpg",
+    "desc": "Smartwatch with health tracking"
+  },
+  {
+    "name": "Anker Soundcore Liberty 3",
+    "price": 120,
+    "img": "https://m.media-amazon.com/images/I/71ANz8uE3yL._AC_SL1500_.jpg",
+    "desc": "Affordable noise-cancelling earbuds"
+  },
+  {
+    "name": "iPhone 14 Pro",
+    "price": 1100,
+    "img": "https://www.apple.com/newsroom/images/2022/09/iphone-14-pro-hero.png",
+    "desc": "Apple's previous flagship phone"
+  },
+  {
+    "name": "MacBook Pro 16-inch",
+    "price": 2500,
+    "img": "https://www.apple.com/newsroom/images/2021/10/macbook-pro-16-inch-hero.png",
+    "desc": "High-performance laptop for professionals"
+  },
+  {
+    "name": "Sony WH-1000XM4",
+    "price": 350,
+    "img": "https://m.media-amazon.com/images/I/71Xz8Zz0Z7L._AC_SL1500_.jpg",
+    "desc": "Industry-leading noise-cancelling headphones"
+  },
+  {
+    "name": "Apple Watch SE",
+    "price": 250,
+    "img": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYJ73_AV1?wid=2000&hei=2000&fmt=jpeg",
+    "desc": "Affordable smartwatch with essential features"
+  },
+  {
+    "name": "Google Nest Hub",
+    "price": 90,
+    "img": "https://store.google.com/product/images/nest_hub_max.jpg",
+    "desc": "Smart display for your home"
+  },
+  {
+    "name": "Amazon Echo Dot (4th Gen)",
+    "price": 50,
+    "img": "https://m.media-amazon.com/images/I/61tQZ3yJ8pL._AC_SL1000_.jpg",
+    "desc": "Compact smart speaker with Alexa"
+  },
+  {
+    "name": "Fitbit Charge 5",
+    "price": 180,
+    "img": "https://static-assets.fitbit.com/images/charge5/charge5-hero.png",
+    "desc": "Advanced fitness and health tracker"
+  },
+  {
+    "name": "Nintendo Switch OLED",
+    "price": 350,
+    "img": "https://www.nintendo.com/content/dam/noa/en_US/hardware/switch/console/switch-oled-model-hero.png",
+    "desc": "Hybrid gaming console with OLED screen"
+  },
+  {
+    "name": "Huawei MateBook X Pro",
+    "price": 1800,
+    "img": "https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/laptops/matebook-x-pro-2021/images/matebook-x-pro-2021-hero.png",
+    "desc": "Premium ultrabook with high-resolution display"
+  },
+  {
+    "name": "Dell Alienware M15",
+    "price": 2000,
+    "img": "https://i.dell.com/sites/imagecontent/products/PublishingImages/alienware-m15-laptop/spi/ng/alienware-m15-laptop-pdp-polaris-500x500.jpg",
+    "desc": "High-performance gaming laptop"
+  },
+  {
+    "name": "Microsoft Surface Pro 8",
+    "price": 1200,
+    "img": "https://www.microsoft.com/en-us/surface/images/surface-pro-8-hero.png",
+    "desc": "Versatile 2-in-1 laptop with touch screen"
+  },
+  {
+    "name": "Asus ZenBook 14",
+    "price": 900,
+    "img": "https://www.asus.com/media/16447317/zenbook-14-ux425ea-hero.png",
+    "desc": "Slim and lightweight ultrabook"
+  }
+ 
+  ]
