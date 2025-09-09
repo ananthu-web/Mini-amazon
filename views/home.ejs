@@ -13,25 +13,32 @@
 <body class="bg-light">
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-warning shadow fixed-top px-3 py-3">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-warning shadow fixed-top px-3 py-0">
     <div class="container-fluid">
-      <a class="navbar-brand fw-bold" href="/">Mini Amazon</a>
+
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="/">
+        <img src="ChatGPT Image Sep 9, 2025 at 08_21_19 PM.png" alt="Mini Azaxon Logo"
+          style="height:60px; width:auto; object-fit:contain; margin-right:8px; margin-left: 30px; transform: scale(1.6);">
+      </a>
+
 
       <form class="d-flex w-50" action="/" method="GET">
-        <input class="form-control me-2 rounded-pill" type="search" name="search" placeholder="Search products...">
+        <input class="form-control me-2 rounded-pill ms-5" type="search" name="search" placeholder="Search products...">
         <button class="btn btn-dark" type="submit">Search</button>
       </form>
 
       <div>
-        <a href="/cart" class="btn btn-outline-dark me-2">🛒 Cart</a>
+        <a href="/cart" class="btn btn-outline-dark me-2 rounded-pill">🛒 Cart</a>
         <% if (!user) { %>
-          <a href="/register" class="btn btn-outline-dark">Sign up</a>
-          <a href="/login" class="btn btn-outline-dark">Login</a>
+          <a href="/register" class="btn btn-outline-dark rounded-pill">Sign up</a>
+          <a href="/login" class="btn btn-outline-dark rounded-pill ms-2">Login</a>
           <% } else { %>
             <span class="me-2">Hello, <%= user.username %></span>
-            <a href="/logout" class="btn btn-outline-dark">Logout</a>
+            <a href="/logout" class="btn btn-outline-dark rounded-pill">Logout</a>
             <% } %>
       </div>
+
+
     </div>
   </nav>
 
@@ -89,7 +96,7 @@
     });
 
 
-    
+
   </script>
 
   <!-- Bootstrap JS -->
