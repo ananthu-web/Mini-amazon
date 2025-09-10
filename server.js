@@ -5,8 +5,14 @@ const path = require('path');
 const bcrypt = require('bcrypt');
 const fs = require('fs');
 const mongoose = require('mongoose');
+const cartRoutes = require('./routes/cart');
 
 const app = express();
+
+
+// --- Models ---
+const User = require('./models/User');
+
 
 // --- MongoDB Connection ---
 mongoose.connect("mongodb://localhost:27017/miniAmazon", {
@@ -15,14 +21,6 @@ mongoose.connect("mongodb://localhost:27017/miniAmazon", {
 }).then(() => console.log("✅ MongoDB connected"))
   .catch(err => console.error("❌ MongoDB connection error:", err));
 
-// --- Models ---
-const User = require('./models/User');
-
-// --- Middleware ---
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.json()); // ✅ handle JSON too
-app.use(express.static(path.join(__dirname, 'public')));
-app.set('view engine', 'ejs');
 
 // --- Session setup ---
 app.use(session({
@@ -31,6 +29,13 @@ app.use(session({
   saveUninitialized: true
 }));
 
+// --- Middleware ---
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json()); // ✅ handle JSON too
+app.use(express.static(path.join(__dirname, 'public')));
+app.set('view engine', 'ejs');
+
+
 // --- Pass user to all views ---
 app.use((req, res, next) => {
   res.locals.user = req.session.user || null;
@@ -38,6 +43,8 @@ app.use((req, res, next) => {
 });
 
 // --- Routes ---
+app.use('/', cartRoutes);
+
 
 // Home page → Fetch products from JSON
 app.get('/', async (req, res) => {
@@ -64,69 +71,69 @@ app.get('/', async (req, res) => {
 });
 
 // --- Cart functionality ---
-app.post('/add-to-cart', (req, res) => {
-  if (!req.session.user) return res.redirect('/login');
+// app.post('/add-to-cart', (req, res) => {
+//   if (!req.session.user) return res.redirect('/login');
 
-  if (!req.session.cart) req.session.cart = [];
-  const { name, price } = req.body;
-  const itemIndex = req.session.cart.findIndex(item => item.name === name);
+//   if (!req.session.cart) req.session.cart = [];
+//   const { name, price } = req.body;
+//   const itemIndex = req.session.cart.findIndex(item => item.name === name);
 
-  if (itemIndex > -1) req.session.cart[itemIndex].qty += 1;
-  else req.session.cart.push({ name, price: Number(price), qty: 1 });
+//   if (itemIndex > -1) req.session.cart[itemIndex].qty += 1;
+//   else req.session.cart.push({ name, price: Number(price), qty: 1 });
 
-  res.redirect('/');
-});
+//   res.redirect('/');
+// });
 
-app.get('/cart', (req, res) => {
-  const cart = req.session.cart || [];
-  const total = cart.reduce((acc, item) => acc + item.price * item.qty, 0);
-  res.render('cart', { cart, total });
-});
+// app.get('/cart', (req, res) => {
+//   const cart = req.session.cart || [];
+//   const total = cart.reduce((acc, item) => acc + item.price * item.qty, 0);
+//   res.render('cart', { cart, total });
+// });
 
-app.post('/remove-from-cart', (req, res) => {
-  const { name } = req.body;
-  if (!req.session.cart) return res.redirect('/cart');
-  const itemIndex = req.session.cart.findIndex(item => item.name === name);
-  if (itemIndex > -1) {
-    req.session.cart[itemIndex].qty -= 1;
-    if (req.session.cart[itemIndex].qty <= 0) req.session.cart.splice(itemIndex, 1);
-  }
-  res.redirect('/cart');
-});
+// app.post('/remove-from-cart', (req, res) => {
+//   const { name } = req.body;
+//   if (!req.session.cart) return res.redirect('/cart');
+//   const itemIndex = req.session.cart.findIndex(item => item.name === name);
+//   if (itemIndex > -1) {
+//     req.session.cart[itemIndex].qty -= 1;
+//     if (req.session.cart[itemIndex].qty <= 0) req.session.cart.splice(itemIndex, 1);
+//   }
+//   res.redirect('/cart');
+// });
 
-app.post('/increase-qty', (req, res) => {
-  const { name } = req.body;
-  if (!req.session.cart) return res.redirect('/cart');
-  const itemIndex = req.session.cart.findIndex(item => item.name === name);
-  if (itemIndex > -1) req.session.cart[itemIndex].qty += 1;
-  res.redirect('/cart');
-});
+// app.post('/increase-qty', (req, res) => {
+//   const { name } = req.body;
+//   if (!req.session.cart) return res.redirect('/cart');
+//   const itemIndex = req.session.cart.findIndex(item => item.name === name);
+//   if (itemIndex > -1) req.session.cart[itemIndex].qty += 1;
+//   res.redirect('/cart');
+// });
 
-app.post('/remove-item', (req, res) => {
-  const { name } = req.body;
-  if (!req.session.cart) return res.redirect('/cart');
-  req.session.cart = req.session.cart.filter(item => item.name !== name);
-  res.redirect('/cart');
-});
+// app.post('/remove-item', (req, res) => {
+//   const { name } = req.body;
+//   if (!req.session.cart) return res.redirect('/cart');
+//   req.session.cart = req.session.cart.filter(item => item.name !== name);
+//   res.redirect('/cart');
+// });
 
-app.post('/checkout', (req, res) => {
-  if (!req.session.user) return res.redirect('/login');
-  if (!req.session.cart || req.session.cart.length === 0) return res.redirect('/cart');
-  res.redirect('/success');
-});
+// app.post('/checkout', (req, res) => {
+//   if (!req.session.user) return res.redirect('/login');
+//   if (!req.session.cart || req.session.cart.length === 0) return res.redirect('/cart');
+//   res.redirect('/success');
+// });
 
-app.get('/success', (req, res) => {
-  const cart = req.session.cart || [];
-  if (cart.length === 0) return res.redirect('/');
-  const total = cart.reduce((acc, item) => acc + item.price * item.qty, 0);
+// app.get('/success', (req, res) => {
+//   const cart = req.session.cart || [];
+//   if (cart.length === 0) return res.redirect('/');
+//   const total = cart.reduce((acc, item) => acc + item.price * item.qty, 0);
 
-  const deliveryDate = new Date();
-  deliveryDate.setDate(deliveryDate.getDate() + 5);
-  const formattedDate = deliveryDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+//   const deliveryDate = new Date();
+//   deliveryDate.setDate(deliveryDate.getDate() + 5);
+//   const formattedDate = deliveryDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 
-  res.render('success', { order: { items: cart, total, deliveryDate: formattedDate } });
-  req.session.cart = [];
-});
+//   res.render('success', { order: { items: cart, total, deliveryDate: formattedDate } });
+//   req.session.cart = [];
+// });
 
 // --- Login / Register / Logout ---
 app.get('/login', (req, res) => res.render('login'));
