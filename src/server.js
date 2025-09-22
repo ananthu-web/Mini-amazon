@@ -75,5 +75,5 @@ app.get('/', async (req, res) => {
 
 // --- Server start ---
 
-app.listen(process.env.PORT, () => console.log(`🚀 Server running at http://localhost:3000`));
+//app.listen(process.env.PORT, () => console.log(`🚀 Server running at http://localhost:3000`));
 module.exports=app
