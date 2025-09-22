@@ -8,10 +8,16 @@ const fs = require('fs');
 const mongoose = require('mongoose');
 const cartRoutes = require('../routes/cart');
 const authRouter = require("../routes/auth")
-const User = require('../models/User');
 
 const app = express();
 
+
+// --- Middleware ---
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json()); // ✅ handle JSON too
+// app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '..', 'public')));
+app.set('view engine', 'ejs');
 
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
@@ -29,11 +35,6 @@ app.use(session({
   saveUninitialized: true
 }));
 
-// --- Middleware ---
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.json()); // ✅ handle JSON too
-app.use(express.static(path.join(__dirname, 'public')));
-app.set('view engine', 'ejs');
 
 
 // --- Pass user to all views ---
@@ -48,14 +49,20 @@ app.use('/', authRouter)
 
 
 
+
 // Home page → Fetch products from JSON
 app.get('/', async (req, res) => {
   try {
-    const dataPath = path.join(__dirname, 'products.json');
-    const rawData = fs.readFileSync(dataPath);
-    let products = JSON.parse(rawData);
+  const dataPath = path.join(__dirname, '..', 'products.json');
 
-    // Search filter
+if (!fs.existsSync(dataPath)) {
+  console.error("❌ products.json not found at", dataPath);
+  return res.status(500).send("Products file not found");
+}
+const rawData = fs.readFileSync(dataPath, 'utf-8');
+let products = JSON.parse(rawData);
+
+    // Search filters
     const searchQuery = req.query.search;
     if (searchQuery) {
       products = products.filter(p =>
@@ -76,4 +83,17 @@ app.get('/', async (req, res) => {
 // --- Server start ---
 
 //app.listen(process.env.PORT, () => console.log(`🚀 Server running at http://localhost:3000`));
-module.exports=app
+
+// const pro = process.env.PORT
+// if (process.env.NODE_ENV !== "production") {
+//   app.listen(process.env.pro || 4000  ,() =>
+//     console.log(`🚀 Server running at http://localhost:${pro}`)
+//   );
+// }
+const PORT = process.env.PORT || 4000;
+
+app.listen(PORT, () => {
+  console.log(`🚀 Server running at http://localhost:${PORT}`);
+});
+
+module.exports = app;
