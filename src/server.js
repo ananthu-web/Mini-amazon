@@ -6,20 +6,13 @@ const path = require('path');
 const bcrypt = require('bcrypt');
 const fs = require('fs');
 const mongoose = require('mongoose');
-const cartRoutes = require('./routes/cart');
-const authRouter = require("./routes/auth")
-const User = require('./models/User');
+const cartRoutes = require('../routes/cart');
+const authRouter = require("../routes/auth")
+const User = require('../models/User');
 
 const app = express();
 
 
-
-// --- MongoDB Connection ---
-// mongoose.connect("mongodb://localhost:27017/miniAmazon", {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true
-// }).then(() => console.log("✅ MongoDB connected"))
-//   .catch(err => console.error("❌ MongoDB connection error:", err));
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
@@ -82,5 +75,5 @@ app.get('/', async (req, res) => {
 
 // --- Server start ---
 
-// app.listen(process.env.PORT, () => console.log(`🚀 Server running at http://localhost:3000`));
+app.listen(process.env.PORT, () => console.log(`🚀 Server running at http://localhost:3000`));
 module.exports=app
