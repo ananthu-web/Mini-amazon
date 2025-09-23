@@ -12,7 +12,7 @@
   overflow: hidden;      /* keeps image inside rounded corners */
 }
 body {
-  padding-top: 50px; /* match navbar height */
+  padding-top: 40px; /* match navbar height */
 }
 
 /* Make the hamburger icon dark/black */
@@ -88,7 +88,7 @@ body {
 }
 
 /* Extra-small screens <=372px */
-@media (max-width: 375px) {
+@media (max-width: 500px) {
   /* Reduce container padding */
   .navbar .container-fluid {
     padding-left: 0px !important;  /* slightly reduced left padding */
@@ -101,4 +101,8 @@ body {
     height: 50px !important;       /* optional smaller logo */
   }
 }
-
+@media (max-width: 500px) {
+  body {
+    padding-top: 20px; /* less space for small screens */
+  }
+}
