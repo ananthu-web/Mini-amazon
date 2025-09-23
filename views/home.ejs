@@ -14,7 +14,7 @@
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-warning shadow fixed-top px-3 py-0">
-    <div class="container-fluid">
+    <div class="container-fluid d-flex align-items-center justify-content-between flex-nowrap">
 
       <!-- Brand / Logo -->
       <a class="navbar-brand fw-bold d-flex align-items-center" href="/">
@@ -23,91 +23,92 @@
       </a>
 
       <!-- Search form (always visible) -->
-   <form class="d-flex mx-2 mx-lg-5 flex-grow-1" action="/" method="GET">
-  <input class="form-control rounded-pill ps-3 w-100 search-input" 
-         type="search" 
-         name="search" 
-         placeholder="Search products..."
-         onkeydown="if(event.key==='Enter'){this.form.submit();}">
-</form>
+      <form class="d-flex mx-2 mx-lg-5 flex-grow-1" action="/" method="GET">
+        <input class="form-control rounded-pill ps-3 w-100 search-input" type="search" name="search"
+          placeholder="Search products..." onkeydown="if(event.key==='Enter'){this.form.submit();}">
+      </form>
 
       <!-- Hamburger button (mobile only) -->
-    <button class="btn btn-warning d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
-      aria-controls="mobileMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <button class="btn btn-warning d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+        aria-controls="mobileMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <!-- Desktop buttons and three-dots menu -->
-    <div class="ms-auto d-none d-lg-flex align-items-center">
-      <% if (!user) { %>
-        <a href="/cart" class="btn btn-custom me-3 mb-2 mb-lg-0 rounded-pill">🛒 Cart</a>
-        <a href="/user/register" class="btn btn-custom me-3 mb-2 mb-lg-0 rounded-pill">Sign Up</a>
-        <a href="/user/login" class="btn btn-custom me-3 mb-2 mb-lg-0 rounded-pill">Login</a>
-
-        <!-- Desktop three-dots menu -->
-        <div class="dropdown">
-          <button class="btn btn-custom rounded-pill dropdown-toggle" type="button" id="moreMenu"
-            data-bs-toggle="dropdown" aria-expanded="false">
-            &#x22EE;
-          </button>
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-square" aria-labelledby="moreMenu">
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li><a class="dropdown-item" href="#">Orders</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Help</a></li>
-            <li><a class="dropdown-item" href="#">Settings</a></li>
-
-            
-          </ul>
-        </div>
-
-      <% } else { %>
-        <span class="me-3 mb-2 mb-lg-0">Hello, <%= user.username %></span>
-        <a href="/logout" class="btn btn-custom me-3 mb-2 mb-lg-0 rounded-pill">Logout</a>
-
-        <!-- Desktop three-dots menu -->
-        <div class="dropdown">
-          <button class="btn btn-outline-dark rounded-pill dropdown-toggle" type="button" id="moreMenu"
-            data-bs-toggle="dropdown" aria-expanded="false">
-            &#x22EE;
-          </button>
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-square" aria-labelledby="moreMenu">
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li><a class="dropdown-item" href="#">Orders</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Help</a></li>
-            <li><a class="dropdown-item" href="#">Settings</a></li>
-          </ul>
-        </div>
-      <% } %>
-    </div>
-
-    <!-- Mobile offcanvas menu -->
-    <div class="offcanvas offcanvas-end rounded-offcanvas w-50 d-lg-none" tabindex="-1" id="mobileMenu"
-      aria-labelledby="mobileMenuLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body d-flex flex-column">
+      <!-- Desktop buttons and three-dots menu -->
+      <div class="ms-auto d-none d-lg-flex align-items-center">
         <% if (!user) { %>
-          <a href="/cart" class="btn btn-custom mb-2 rounded-pill">🛒 Cart</a>
-          <a href="/user/register" class="btn btn-custom mb-2 rounded-pill">Sign Up</a>
-          <a href="/user/login" class="btn btn-custom mb-2 rounded-pill">Login</a>
-          <a href="#" class="btn btn-custom mb-2 rounded-pill">Profile</a>
-          <a href="#" class="btn btn-custom mb-2 rounded-pill">Orders</a>
-          <a href="#" class="btn btn-custom mb-2 rounded-pill">Help</a>
-          <a href="#" class="btn btn-custom mb-2 rounded-pill">Settings</a>
-        <% } else { %>
-          <span class="mb-2">Hello, <%= user.username %></span>
-          <a href="/logout" class="btn btn-custom mb-2 rounded-pill">Logout</a>
-          <a href="#" class="btn btn-custom mb-2 rounded-pill">Profile</a>
-          <a href="#" class="btn btn-custom mb-2 rounded-pill">Orders</a>
-          <a href="#" class="btn btn-custom mb-2 rounded-pill">Help</a>
-          <a href="#" class="btn btn-custom mb-2 rounded-pill">Settings</a>
-        <% } %>
+          <a href="/cart" class="btn btn-custom me-3 mb-2 mb-lg-0 rounded-pill">🛒 Cart</a>
+          <a href="/user/register" class="btn btn-custom me-3 mb-2 mb-lg-0 rounded-pill">Sign Up</a>
+          <a href="/user/login" class="btn btn-custom me-3 mb-2 mb-lg-0 rounded-pill">Login</a>
+
+          <!-- Desktop three-dots menu -->
+          <div class="dropdown">
+            <button class="btn btn-custom rounded-pill dropdown-toggle" type="button" id="moreMenu"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              &#x22EE;
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-square" aria-labelledby="moreMenu">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Orders</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Help</a></li>
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+
+
+            </ul>
+          </div>
+
+          <% } else { %>
+            <span class="me-3 mb-2 mb-lg-0">Hello, <%= user.username %></span>
+            <a href="/logout" class="btn btn-custom me-3 mb-2 mb-lg-0 rounded-pill">Logout</a>
+
+            <!-- Desktop three-dots menu -->
+            <div class="dropdown">
+              <button class="btn btn-outline-dark rounded-pill dropdown-toggle" type="button" id="moreMenu"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                &#x22EE;
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-square" aria-labelledby="moreMenu">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Orders</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Help</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+              </ul>
+            </div>
+            <% } %>
       </div>
-    </div>
+
+      <!-- Mobile offcanvas menu -->
+      <div class="offcanvas offcanvas-end rounded-offcanvas w-50 d-lg-none" tabindex="-1" id="mobileMenu"
+        aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+          <% if (!user) { %>
+            <a href="/cart" class="btn btn-custom mb-2 rounded-pill">🛒 Cart</a>
+            <a href="/user/register" class="btn btn-custom mb-2 rounded-pill">Sign Up</a>
+            <a href="/user/login" class="btn btn-custom mb-2 rounded-pill">Login</a>
+            <a href="#" class="btn btn-custom mb-2 rounded-pill">Profile</a>
+            <a href="#" class="btn btn-custom mb-2 rounded-pill">Orders</a>
+            <a href="#" class="btn btn-custom mb-2 rounded-pill">Help</a>
+            <a href="#" class="btn btn-custom mb-2 rounded-pill">Settings</a>
+            <% } else { %>
+              <span class="mb-2">Hello, <%= user.username %></span>
+              <a href="/logout" class="btn btn-custom mb-2 rounded-pill">Logout</a>
+              <a href="#" class="btn btn-custom mb-2 rounded-pill">Profile</a>
+              <a href="#" class="btn btn-custom mb-2 rounded-pill">Orders</a>
+              <a href="#" class="btn btn-custom mb-2 rounded-pill">Help</a>
+              <a href="#" class="btn btn-custom mb-2 rounded-pill">Settings</a>
+              <% } %>
+        </div>
+      </div>
 
     </div> <!-- end container-fluid -->
   </nav>
