@@ -73,6 +73,45 @@ body {
   overflow: hidden; /* Make sure content doesn’t overflow */
 }
 
+/* Reduce search bar width only on large screens */
+@media (min-width: 992px) {
+  .search-input {
+    max-width: 80%; /* adjust this value (30–40%) to your liking */
+  }
+}
+
+/* Medium and larger screens */
+@media (min-width: 768px) and (max-width: 991px) {
+  .search-input {
+    max-width: 80%;  /* half width on medium screens */
+  }
+}
+
+@media (max-width: 429px) {
+  .search-input {
+    max-width: 100%;
+  }
+}
+
+/* Extra-small screens <430px */
+@media (max-width: 429px) {
+  .navbar-brand img {
+     height: 55px !important;    
+    margin-left: 5px !important; 
+    margin-right: 5px !important; 
+  }
+  .navbar {
+    padding-top: 0.25rem !important;    /* reduce top padding */
+    padding-bottom: 0.25rem !important; /* reduce bottom padding */
+  }
+}
+/* Extra-small screens <430px */
+@media (max-width: 429px) {
+  .product-container {
+    margin-top: 2.5rem !important;  /* reduce top margin */
+    padding-top: 0.5rem !important; /* reduce top padding */
+  }
+}
 
 
 

@@ -23,10 +23,13 @@
       </a>
 
       <!-- Search form (always visible) -->
-      <form class="d-flex w-50 center-search ms-5" action="/" method="GET">
-        <input class="form-control rounded-pill" type="search" name="search" placeholder="Search products..."
-          onkeydown="if(event.key==='Enter'){this.form.submit();}">
-      </form>
+   <form class="d-flex mx-2 mx-lg-5 flex-grow-1" action="/" method="GET">
+  <input class="form-control rounded-pill ps-3 w-100 search-input" 
+         type="search" 
+         name="search" 
+         placeholder="Search products..."
+         onkeydown="if(event.key==='Enter'){this.form.submit();}">
+</form>
 
       <!-- Hamburger button (mobile only) -->
     <button class="btn btn-warning d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
@@ -110,7 +113,7 @@
   </nav>
 
   <!-- Product Grid -->
-  <div class="container my-5 pt-4">
+  <div class="container product-container my-5 pt-4">
     <div class="row g-4">
       <% products.forEach(product=> { %>
         <div class="col-sm-6 col-md-4 col-lg-3">
