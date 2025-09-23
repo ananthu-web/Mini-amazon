@@ -15,11 +15,11 @@
     <div>
       <a href="/" class="btn btn-outline-dark me-2">🏠 Home</a>
       <% if (!user) { %>
-        <a href="/register" class="btn btn-outline-dark">Sign up</a>
-        <a href="/login" class="btn btn-outline-dark">Login</a>
+        <a href="/register" class="btn btn-outline-dark rounded-pill">Sign up</a>
+        <a href="/login" class="btn btn-outline-dark rounded-pill">Login</a>
       <% } else { %>
         <span class="me-2">Hello, <%= user.username || user.email %></span>
-        <a href="/logout" class="btn btn-outline-dark">Logout</a>
+        <a href="/logout" class="btn btn-outline-dark rounded-pill">Logout</a>
       <% } %>
     </div>
   </div>
