@@ -15,6 +15,65 @@ body {
   padding-top: 50px; /* match navbar height */
 }
 
+/* Make the hamburger icon dark/black */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.navbar-toggler {
+  border: none;
+}
+/* Add some spacing below hamburger menu items */
+#navbarContent.collapse.show {
+  padding-bottom: 10px; /* adjust as needed */
+}
+/* Center the search bar inside navbar */
+.center-search {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dropdown-menu-dark-custom {
+    background-color: #000;      /* Black background */
+}
+
+.dropdown-menu-dark-custom .dropdown-item {
+    color: #fff;                /* White text */
+}
+
+.dropdown-menu-dark-custom .dropdown-item:hover {
+    background-color: #333;     /* Dark gray on hover */
+}
+/* Make dropdown square and match navbar color */
+.dropdown-menu-square {
+    background-color: #ffc107; /* Same as bg-warning */
+    border-radius: 0.5rem;           /* Remove rounded corners */
+}
+
+.dropdown-menu-square .dropdown-item {
+    color: #000;               /* Dark text to match navbar */
+}
+
+.dropdown-menu-square .dropdown-item:hover {
+    background-color: #e0a800; /* Slightly darker hover */
+}
+.btn-custom {
+  background-color: #ffc107;   /* same as navbar bg-warning */
+  color: #212529;              /* text color */
+  border: none;                /* remove border */
+}
+
+.btn-custom:hover, 
+.btn-custom:focus {
+  background-color: #e0a800;   /* slightly darker on hover */
+  color: #212529;
+  text-decoration: none;        /* optional: remove underline */
+}
+.rounded-offcanvas {
+  border-radius: 20px 0 0 20px; /* Top-left, top-right, bottom-right, bottom-left */
+  overflow: hidden; /* Make sure content doesn’t overflow */
+}
+
+
 
 
 

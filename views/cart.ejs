@@ -13,13 +13,13 @@
   <div class="container-fluid">
     <a class="navbar-brand fw-bold" href="/">Mini Amazon</a>
     <div>
-      <a href="/" class="btn btn-outline-dark me-2 rounded-pill">🏠 Home</a>
+      <a href="/" class="btn btn-custom  me-2 rounded-pill">🏠 Home</a>
       <% if (!user) { %>
-        <a href="/register" class="btn btn-outline-dark rounded-pill">Sign up</a>
-        <a href="/login" class="btn btn-outline-dark rounded-pill">Login</a>
+        <a href="/register" class="btn btn-custom  rounded-pill">Sign up</a>
+        <a href="/login" class="btn btn-custom  rounded-pill">Login</a>
       <% } else { %>
         <span class="me-2">Hello, <%= user.username || user.email %></span>
-        <a href="/logout" class="btn btn-outline-dark rounded-pill">Logout</a>
+        <a href="/logout" class="btn btn-custom rounded-pill">Logout</a>
       <% } %>
     </div>
   </div>
