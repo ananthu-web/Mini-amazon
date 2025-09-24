@@ -106,3 +106,9 @@ body {
     padding-top: 20px; /* less space for small screens */
   }
 }
+.user-greeting {
+  font-weight: bolder;
+  position: relative;
+  top: 2px; /* adjust number (4–8px) until it looks right */
+  display: inline-block;
+}
