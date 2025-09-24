@@ -36,8 +36,9 @@
 
       <!-- Desktop buttons and three-dots menu -->
       <div class="ms-auto d-none d-lg-flex align-items-center">
+      
         <% if (!user) { %>
-          <a href="/cart" class="btn btn-custom me-3 mb-2 mb-lg-0 rounded-pill">🛒 Cart</a>
+            <a href="/cart" class="btn btn-custom me-3 mb-2 mb-lg-0 rounded-pill">🛒 Cart</a>
           <a href="/user/register" class="btn btn-custom me-3 mb-2 mb-lg-0 rounded-pill">Sign Up</a>
           <a href="/user/login" class="btn btn-custom me-3 mb-2 mb-lg-0 rounded-pill">Login</a>
 
@@ -61,12 +62,14 @@
           </div>
 
           <% } else { %>
+            
             <span class="me-3 mb-2 mb-lg-0">Hello, <%= user.username %></span>
+               <a href="/cart" class="btn btn-custom me-3 mb-2 mb-lg-0 rounded-pill">🛒 Cart</a>
             <a href="/logout" class="btn btn-custom me-3 mb-2 mb-lg-0 rounded-pill">Logout</a>
 
             <!-- Desktop three-dots menu -->
             <div class="dropdown">
-              <button class="btn btn-outline-dark rounded-pill dropdown-toggle" type="button" id="moreMenu"
+              <button class="btn btn-custom rounded-pill dropdown-toggle" type="button" id="moreMenu"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 &#x22EE;
               </button>
@@ -91,8 +94,9 @@
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body d-flex flex-column">
+         
           <% if (!user) { %>
-            <a href="/cart" class="btn btn-custom mb-2 rounded-pill">🛒 Cart</a>
+             <a href="/cart" class="btn btn-custom mb-2 rounded-pill">🛒 Cart</a>
             <a href="/user/register" class="btn btn-custom mb-2 rounded-pill">Sign Up</a>
             <a href="/user/login" class="btn btn-custom mb-2 rounded-pill">Login</a>
             <a href="#" class="btn btn-custom mb-2 rounded-pill">Profile</a>
@@ -100,7 +104,9 @@
             <a href="#" class="btn btn-custom mb-2 rounded-pill">Help</a>
             <a href="#" class="btn btn-custom mb-2 rounded-pill">Settings</a>
             <% } else { %>
+                
               <span class="mb-2">Hello, <%= user.username %></span>
+               <a href="/cart" class="btn btn-custom mb-2 rounded-pill">🛒 Cart</a>
               <a href="/logout" class="btn btn-custom mb-2 rounded-pill">Logout</a>
               <a href="#" class="btn btn-custom mb-2 rounded-pill">Profile</a>
               <a href="#" class="btn btn-custom mb-2 rounded-pill">Orders</a>

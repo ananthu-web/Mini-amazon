@@ -24,14 +24,7 @@ app.set('views', path.join(__dirname, '..', 'views'));
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("✅ MongoDB connected"))
   .catch(err => console.error("❌ MongoDB connection error:", err));
-// mongoose.connect(process.env.MONGO_URI, {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-//   serverSelectionTimeoutMS: 10000, // 10 seconds
-//   connectTimeoutMS: 10000
-// })
-// .then(() => console.log("✅ MongoDB connected"))
-// .catch(err => console.error("❌ MongoDB connection error:", err));
+
 
 
 // --- Session setup ---
@@ -86,16 +79,7 @@ let products = JSON.parse(rawData);
 });
 
 
-// --- Server start ---
 
-//app.listen(process.env.PORT, () => console.log(`🚀 Server running at http://localhost:3000`));
-
-// const pro = process.env.PORT
-// if (process.env.NODE_ENV !== "production") {
-//   app.listen(process.env.pro || 4000  ,() =>
-//     console.log(`🚀 Server running at http://localhost:${pro}`)
-//   );
-// }
 const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, () => {
