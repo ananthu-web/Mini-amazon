@@ -9,9 +9,12 @@
 <body class="bg-light">
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-warning shadow fixed-top px-3 py-3">
+<nav class="navbar navbar-expand-lg navbar-dark bg-warning shadow fixed-top px-3 py-0">
   <div class="container-fluid">
-    <a class="navbar-brand fw-bold" href="/">Mini Amazon</a>
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="/">
+        <img src="/images/Logo.png" alt="Mini Azaxon Logo"
+          style="height:60px; width:auto; object-fit:contain; margin-right:8px; margin-left: 15px; transform: scale(1.6);">
+      </a>
     <div>
       <a href="/" class="btn btn-custom  me-2 rounded-pill">🏠 Home</a>
       <% if (!user) { %>
