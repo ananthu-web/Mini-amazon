@@ -14,61 +14,81 @@
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-warning shadow fixed-top px-3 py-0">
-    <div class="container-fluid">
-      <a class="navbar-brand fw-bold d-flex align-items-center" href="/">
-        <img src="/images/Logo.png" alt="Mini Azaxon Logo"
-          style="height:60px; width:auto; object-fit:contain; margin-right:8px; margin-left: 15px; transform: scale(1.6);">
-      </a>
-      <div>
-        
-        <% if (!user) { %>
-          <a href="/" class="btn btn-custom  me-2 rounded-pill">🏠 Home</a>
-          <a href="/user/register" class="btn btn-custom  rounded-pill">Sign up</a>
-          <a href="/user/login" class="btn btn-custom  rounded-pill">Login</a>
+  <div class="container-fluid">
 
-          <!-- Three-dots menu -->
-          <div class="dropdown d-inline-block">
-            <button class="btn btn-custom rounded-pill dropdown-toggle" type="button" id="moreMenu"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              &#x22EE;
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-square" aria-labelledby="moreMenu">
-              <li><a class="dropdown-item" href="#">Profile</a></li>
-              <li><a class="dropdown-item" href="#">Orders</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Help</a></li>
-              <li><a class="dropdown-item" href="#">Settings</a></li>
-            </ul>
-          </div>
+    <!-- Logo -->
+    <a class="navbar-brand fw-bold d-flex align-items-center" href="/">
+      <img src="/images/Logo.png" alt="Mini Azaxon Logo"
+        style="height:60px; width:auto; object-fit:contain; margin-right:8px; margin-left:15px; transform: scale(1.6);">
+    </a>
 
-          <% } else { %>
-            <span class="me-3 user-greeting" style="font-weight: bolder;">Hello, <%= user.username || user.email %></span>
-            <a href="/" class="btn btn-custom  me-2 rounded-pill">🏠 Home</a>
-            <a href="/logout" class="btn btn-custom rounded-pill">Logout</a>
+    <!-- Hamburger for mobile -->
+    <button class="btn btn-warning d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+        aria-controls="mobileMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-            <!-- Three-dots menu -->
-            <div class="dropdown d-inline-block">
-              <button class="btn btn-custom rounded-pill dropdown-toggle" type="button" id="moreMenu"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                &#x22EE;
-              </button>
-              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-square" aria-labelledby="moreMenu">
-                <li><a class="dropdown-item" href="#">Profile</a></li>
-                <li><a class="dropdown-item" href="#">Orders</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Help</a></li>
-                <li><a class="dropdown-item" href="#">Settings</a></li>
-              </ul>
-            </div>
+    <!-- Desktop menu -->
+    <div class="d-none d-lg-flex ms-auto align-items-center">
 
-            <% } %>
+      <% if (!user) { %>
+      <a href="/" class="btn btn-custom me-2 rounded-pill">🏠 Home</a>
+      <a href="/user/register" class="btn btn-custom me-2 rounded-pill">Sign Up</a>
+      <a href="/user/login" class="btn btn-custom me-2 rounded-pill">Login</a>
+      <% } else { %>
+      <span class="me-2 fw-bold user-greeting">Hello, <%= user.username %></span>
+      <a href="/" class="btn btn-custom me-2 rounded-pill">🏠 Home</a>
+      <a href="/logout" class="btn btn-custom me-2 rounded-pill">Logout</a>
+      <% } %>
+
+      <!-- Three-dots menu -->
+      <div class="dropdown">
+        <button class="btn btn-custom rounded-pill dropdown-toggle" type="button" id="moreMenu"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          &#x22EE;
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-square" aria-labelledby="moreMenu">
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#">Orders</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Help</a></li>
+          <li><a class="dropdown-item" href="#">Settings</a></li>
+        </ul>
       </div>
+
     </div>
-  </nav>
+  </div>
+</nav>
+
+  <!-- Offcanvas for mobile -->
+  <<div class="offcanvas offcanvas-end rounded-offcanvas w-50 d-lg-none" tabindex="-1" id="mobileMenu"
+  aria-labelledby="mobileMenuLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column">
+
+    <% if (!user) { %>
+      <a href="/" class="btn btn-custom mb-2 rounded-pill">🏠 Home</a>
+      <a href="/user/register" class="btn btn-custom mb-2 rounded-pill">Sign Up</a>
+      <a href="/user/login" class="btn btn-custom mb-2 rounded-pill">Login</a>
+      <a href="#" class="btn btn-custom mb-2 rounded-pill">Profile</a>
+      <a href="#" class="btn btn-custom mb-2 rounded-pill">Orders</a>
+      <a href="#" class="btn btn-custom mb-2 rounded-pill">Help</a>
+      <a href="#" class="btn btn-custom mb-2 rounded-pill">Settings</a>
+    <% } else { %>
+      <span class="mb-2 fw-bold">Hello, <%= user.username %></span>
+      <a href="/" class="btn btn-custom mb-2 rounded-pill">🏠 Home</a>
+      <a href="/logout" class="btn btn-custom mb-2 rounded-pill">Logout</a>
+      <a href="#" class="btn btn-custom mb-2 rounded-pill">Profile</a>
+      <a href="#" class="btn btn-custom mb-2 rounded-pill">Orders</a>
+      <a href="#" class="btn btn-custom mb-2 rounded-pill">Help</a>
+      <a href="#" class="btn btn-custom mb-2 rounded-pill">Settings</a>
+    <% } %>
+
+  </div>
+</div>
 
   <div class="container my-5 pt-5">
     <h1 class="mb-4">Your Cart</h1>
